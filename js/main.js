@@ -55,7 +55,7 @@ function cobrar(producto, precio, nombre) {
     texto += "Producto " + productoNombre + "- Precio : " + "$" + precio + "\n";
     total += precio;
 
-    let seguir = confirm("Desea agregar algo mas?");
+    let seguir = confirm("Desea agregar algo mas? (En caso de que no, toca CANCELAR)");
     if (seguir) {
         productoNombre = mostrarProductos();
         precio = validarPrecio(productoNombre);
