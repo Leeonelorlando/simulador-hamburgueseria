@@ -1,4 +1,4 @@
-/* SIMULADOR DE UNA HAMBURGUESERIA */
+/* SIMULADOR DE UNA HAMBURGUESERIA -- ENTREGA 1
 
 function solicarNombre() {
     alert("Bienvenido a Burger+");
@@ -74,4 +74,59 @@ function cobrar(producto, precio, nombre) {
 let nombreCliente = solicarNombre();
 let productoNombre = mostrarProductos();
 let precio = validarPrecio(productoNombre);
-cobrar(productoNombre, precio, nombreCliente);
+cobrar(productoNombre, precio, nombreCliente);*/
+
+
+
+// ENTREGA 2 //
+
+//Entrada de Datos
+let nombre_producto = "";
+let precio_producto = "";
+
+//Recorrer los Productos, donde selecciono un producto por código
+let seleccion = "";
+
+while (seleccion.toUpperCase() != "ESC") {
+    let salida = "Seleccione el Número de Producto a agregar al Carrito:\n\nEn caso de llevar mas de 1 producto tiene un 10% de descuento!!! Para continuar, toque CANCELAR\n";
+
+    for (let producto of productos) {
+        let producto_lista = new Producto(producto);
+        salida += "ID: " + producto.id + " - Nombre: " + producto_lista.nombre + " - Precio: $" + producto_lista.precio + "\n";
+    }
+
+    let seleccion = prompt(salida);
+
+    if ((seleccion === null) || (seleccion.toUpperCase() == "ESC")) {
+        break;
+    }
+
+    let producto_encontrado = buscarProducto(seleccion);
+
+    if (producto_encontrado != 0) {
+        let producto_lista = new Producto(producto_encontrado);
+        producto_lista.venderProducto();
+        productos_seleccionados.push(producto_lista);
+        eliminarProducto(producto_encontrado.id);
+        console.log("Agregaste al Carrito: " + producto_lista.nombre + " ($" + producto_lista.precio + ")");
+    }
+}
+
+console.log(productos_seleccionados);
+
+let total_pagar = 0;
+
+//Calcular el Total a Pagar
+for (let producto of productos_seleccionados) {
+    console.log("Producto: " + producto.nombre);
+    console.log("Precio original: $" + producto.precio);
+
+    if (productos_seleccionados.length >= 2) {
+        producto.aplicarDescuento();
+        console.log("Precio c/Descuento: $" + producto.precio);
+    }
+
+    total_pagar += producto.precio;
+}
+
+alert("El Total a Pagar es: $" + total_pagar);
