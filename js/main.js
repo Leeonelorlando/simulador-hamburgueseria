@@ -130,3 +130,21 @@ for (let producto of productos_seleccionados) {
 }
 
 alert("El Total a Pagar es: $" + total_pagar);
+
+//Eventos Mouse
+
+let boton = document.getElementById("probando");
+
+boton.onmouseover = () => { console.log("Esta por seleccionar ALTA HAMBURGUESA") };
+boton.onclick = () => { console.log("Se agregó la Sweet Onion") };
+
+/* boton.addEventListener("click", eventoClick);
+boton.addEventListener("mouseup", eventoOnMouseUp);
+
+function eventoClick() {
+    console.log("evento click");
+}
+
+function eventoOnMouseUp() {
+    console.log("evento On Mouse Up");
+} */
