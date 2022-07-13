@@ -133,10 +133,18 @@ alert("El Total a Pagar es: $" + total_pagar);
 
 //Eventos Mouse
 
-let boton = document.getElementById("probando");
+let boton = document.getElementById("sweet");
+let boton2 = document.getElementById("cheese");
+let boton3 = document.getElementById("pesto");
 
 boton.onmouseover = () => { console.log("Esta por seleccionar ALTA HAMBURGUESA") };
 boton.onclick = () => { console.log("Se agregó la Sweet Onion") };
+
+boton2.onmouseover = () => { console.log("Esta por seleccionar ALTA HAMBURGUESA") };
+boton2.onclick = () => { console.log("Se agregó la Cheese Burger") };
+
+boton3.onmouseover = () => { console.log("Esta por seleccionar ALTA HAMBURGUESA") };
+boton3.onclick = () => { console.log("Se agregó la Pesto Burger") };
 
 /* boton.addEventListener("click", eventoClick);
 boton.addEventListener("mouseup", eventoOnMouseUp);
