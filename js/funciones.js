@@ -79,7 +79,7 @@ function eliminarDelCarrito(id) {
         productos_carrito.splice(posProducto, 1);
     }
 
-    console.log("Borra pa!")
+    console.log("Borra todo!")
     guardarProductosCarrito(productos_carrito);
     refreshBotonCarrito();
     mostrarProductosDelCarrito();
