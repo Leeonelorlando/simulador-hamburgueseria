@@ -1,53 +1,63 @@
-// Defino mi Array de Productos
-const productos = [
-    { id: 1, nombre: "Sweet Onion", precio: 1800 },
-    { id: 2, nombre: "CheeseBurger", precio: 1700 },
-    { id: 3, nombre: "Pesto Burger", precio: 1800 },
-];
-
-// Defino mi Array de Productos seleccionados
-const productos_seleccionados = [];
-
-// Definir la Clase Producto
-class Producto {
-    constructor(objeto) {
-        this.id = objeto.id;
-        this.nombre = objeto.nombre.toUpperCase();
-        this.precio = parseFloat(objeto.precio);
-        this.descuento = 20;
-        this.vendido = false;
+const productos = [{
+        nombre: "Cheese Baby",
+        descripcion: "Pan de papa, carne smash 110g, cheddar x2, cebolla, salsa baby",
+        id: 1,
+        precio: 1000,
+        imagen: "img/BACON BABY HAMBURGUESA.png",
+    },
+    {
+        nombre: "Bacon Baby",
+        descripcion: "Pan de papa, carne smash 110g, cheddar x2, bacon x4",
+        id: 2,
+        precio: 1100,
+        imagen: "img/BACON BABY HAMBURGUESA.png",
+    },
+    {
+        nombre: "Onion Baby",
+        descripcion: "Pan de papa, carne smash fried onion 110g, cheddar x4",
+        id: 3,
+        precio: 1200,
+        imagen: "img/BACON BABY HAMBURGUESA.png",
+    },
+    {
+        nombre: "Quarter Baby",
+        descripcion: "Pan de papa, carne smash 110g, cheddar x2, salsa quarter, cebolla en cubos",
+        id: 4,
+        precio: 1300,
+        imagen: "img/BACON BABY HAMBURGUESA.png",
+    },
+    {
+        nombre: "Smash Baby",
+        descripcion: "Pan de papa, doble carne smash 110g, cheddar x2, cebolla en cubos, salsa baby",
+        id: 5,
+        precio: 1400,
+        imagen: "img/BACON BABY HAMBURGUESA.png",
+    },
+    {
+        nombre: "Mush Baby",
+        descripcion: "Pan Brioche, carne smash, emmenthal x2, salsa blue, champiñones, bacon",
+        id: 6,
+        precio: 1500,
+        imagen: "img/BACON BABY HAMBURGUESA.png",
     }
+]
 
-    aplicarDescuento() {
-        this.precio = this.precio - ((this.precio * this.descuento) / 100);
-    }
+//// Funciones ////////////////
 
-    venderProducto() {
-        this.vendido = true;
-    }
+/// Funciones LocalStorage
 
-    fueVendido() {
-        return this.vendido;
-    }
+function obtenerProductosLS() {
+    return JSON.parse(localStorage.getItem("productos")) || [];
 }
 
-// Busca en el Array el Producto con el ID enviado por parámetro. Devuelve un Objeto con el ID
-function buscarProducto(id) {
-    for (let producto of productos) {
-        if (producto.id == id) {
-            return producto;
-        }
-    }
-
-    return 0;
+function guardarProductosLS(productos) {
+    localStorage.setItem("productos", JSON.stringify(productos))
 }
 
-// Elimino Producto del Array de Productos
-function eliminarProducto(id) {
-    for (let producto of productos) {
-        if (producto.id == id) {
-            let produ = productos.indexOf(producto);
-            productos.splice(produ, 1);
-        }
-    }
+function obtenerProductosCarrito() {
+    return JSON.parse(localStorage.getItem("carrito")) || [];
+}
+
+function guardarProductosCarrito(productos) {
+    localStorage.setItem("carrito", JSON.stringify(productos))
 }

@@ -2,56 +2,108 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/css/estilos.css" />
-    <title>Burguer+</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smashed Babies</title>
+    <link rel="icon" type="image/x-icon" href="img/SMASHED BABIES LOGO 1.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Dancing+Script:wght@700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
 </head>
 
-<body>
-    <h1 class="display-4 fw-bolder">BURGER PLUS</h1>
+<body style="background-color:rgb(55, 53, 52);">
+    <!--  header  -->
+    <header class="container-fluid color_header  p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11">
+                    <nav class="navbar navbar-expand-lg container">
+                        <a class="navbar-brand" href="#"><img src="img/SMASHED BABIES LOGO 2.png" alt="Logo" width="100" /></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav tamaño">
+                                <a class="nav-link letra" href="index.html">Productos</a>
+                                <a class="nav-link letra" href="https://www.instagram.com/smashed_babies/">Contacto</a>
+                            </div>
+                        </div>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="card col-sm-12 col-md-6 col-lg-3">
-                <img src="https://bigpons.com.ar/productos/20220621103017.jpeg" class="rounded float-start" alt="...">
-                <div class="card-body">
-                    <h5 class="fw-bolder">Sweet Onion</h5>
-                    <p class="card-text">$1800</p>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="sweet" href="#">Comprar</a></div>
-                    </div>
                 </div>
+                <div class="col-md-1">
+                    <a href="carrito.html" id="carrito"></a>
+                </div>
+                </nav>
             </div>
-            <div class="card col-sm-12 col-md-6 col-lg-3">
-                <img src="https://bigpons.com.ar/productos/20220621103022.jpeg" class="rounded float" alt="..." style="width: 304px;">
-                <div class="card-body">
-                    <h5 class="fw-bolder">CheeseBurger</h5>
-                    <p class="card-text">$1700</p>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="cheese" href="#">Comprar</a></div>
-                    </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 d-flex-column text-center">
+                    <img class="alineadoTextoImagenAbajo " src="img/SMASHED BABIES LOGO 4.png" width="350" />
+                    <h4 class="subtitulo_principal letra">
+                        Todas las hamburguesas incluyen papas fritas!
+                    </h4>
+                    <!-- <h1 class="titulo_principal letra-titulos"></h1> -->
                 </div>
-            </div>
-            <div class="card col-sm-12 col-md-6 col-lg-3">
-                <div class="text-center">
-                    <img src="https://bigpons.com.ar/productos/20220621103302.jpeg" class="rounded float-end" alt="..." style="width: 304px;">
-                </div>
-                <div class="card-body">
-                    <h5 class="fw-bolder">Pesto Burger</h5>
-                    <span class="text-muted text-decoration-line-through">$1950</span> $1800
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <br>
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="pesto" href="#">Comprar</a></div>
-                    </div>
+                <div class="row" id="productos">
+
                 </div>
             </div>
         </div>
-    </div>
-    <script src="js/productos.js"></script>
-    <script src="js/main.js"></script>
-</body>
+    </main>
 
+    <!--  FOOTER  -->
+
+    <footer class="container-fluid color_header p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="letra">Todos los derechos reservados 2022 - Smashed Babies Burgers ®</span
+            >
+          </div>
+          <div class="col-md-6">
+            <p class="text-end">
+              <a href=""
+                ><img
+                  src="img/instagram.svg"
+                  alt="IG"
+                  width="28"
+                  class="padding_footer-img"
+              /></a>
+              <a href=""
+                ><img
+                  src="img/whatsapp.svg"
+                  alt="WP"
+                  width="28"
+                  class="padding_footer-img"
+              /></a>
+              <a href=""
+                ><img
+                  src="img/facebook.svg"
+                  alt="FB"
+                  width="28"
+                  class="padding_footer-img"
+              /></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS BS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS NAT -->
+    <script src="js/productos.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/main.js"></script>      
+  </body>
 </html>

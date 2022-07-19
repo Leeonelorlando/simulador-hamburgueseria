@@ -1,0 +1,52 @@
+.letra-titulos {
+    font-family: 'Chicle', cursive;
+}
+
+.letra {
+    font-family: 'Chicle', cursive;
+}
+
+.color_header {
+    background-color: #d3d2d2;
+}
+
+.titulo_principal {
+    font-size: 4rem;
+    margin-top: 2rem;
+    color: #d3d2d2;
+}
+
+.subtitulo_principal {
+    margin-top: -2rem;
+    font-size: 1.2rem;
+    color: #d3d2d2;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.padding_footer-img {
+    margin-right: 1rem;
+}
+
+.card-precio {
+    font-size: 1.5rem;
+    color: #d3d2d2;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card-descripcion {
+    margin-top: 1rem;
+    color: #d3d2d2;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card-titulo {
+    font-size: 1.5rem;
+    background-color: #de5858;
+    border-radius: 25px;
+    margin-top: 2rem;
+    font-family: 'Chicle', cursive;
+}
+
+.tamaño {
+    font-size: 1.3rem;
+}
