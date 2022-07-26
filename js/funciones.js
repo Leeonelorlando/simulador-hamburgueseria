@@ -47,6 +47,7 @@ function vaciarCarrito() {
     localStorage.removeItem("carrito");
     refreshBotonCarrito()
     mostrarProductosDelCarrito();
+    alertaLimpiarCarrito();
 }
 
 
@@ -66,6 +67,7 @@ function agregarAlCarrito(id) {
 
     guardarProductosCarrito(productos_carrito);
     refreshBotonCarrito();
+    productoAgregado();
 }
 
 
@@ -83,4 +85,32 @@ function eliminarDelCarrito(id) {
     guardarProductosCarrito(productos_carrito);
     refreshBotonCarrito();
     mostrarProductosDelCarrito();
+    alertaEliminarCarrito()
+}
+
+function productoAgregado() {
+
+    Swal.fire(
+        'Producto agregado!',
+        'Has agregado el producto al carrito!',
+        'success'
+    )
+}
+
+function alertaLimpiarCarrito() {
+
+    Swal.fire(
+        'Vaciaste el carrito!',
+        'Vuelve a elegir tus productos!',
+        'success'
+    )
+}
+
+function alertaEliminarCarrito() {
+
+    Swal.fire(
+        'Eliminaste el producto!',
+        'Has eliminado al producto del carrito',
+        'success'
+    )
 }
