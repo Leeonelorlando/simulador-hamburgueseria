@@ -1,0 +1,17 @@
+{
+    "name": "leonel-orlando",
+    "version": "1.0.0",
+    "description": "Web Page simulator-burger with HTML | CSS | Javascript",
+    "main": "index.js",
+
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Leeonelorlando/simulador-hamburgueseria"
+    },
+    "homepage": "https://github.com/Leeonelorlando/simulador-hamburgueseria#readme",
+    "devDependencies": {
+        "node-sass": "^7.0.1",
+        "nodemon": "^2.0.16",
+        "sass": "^1.50.0"
+    }
+}
